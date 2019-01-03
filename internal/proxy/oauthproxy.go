@@ -654,7 +654,7 @@ func (p *OAuthProxy) OAuthStart(rw http.ResponseWriter, req *http.Request, tags 
 	}
 	p.csrfStore.SetCSRF(rw, req, encryptedCSRF)
 
-	// we encrypt this value to be opaque the uri q uery value
+	// we encrypt this value to be opaque the uri query value
 	// this value will be unique since we always use a randomized nonce as part of marshaling
 	encryptedState, err := p.CookieCipher.Marshal(state)
 	if err != nil {

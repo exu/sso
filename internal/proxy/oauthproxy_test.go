@@ -1364,7 +1364,6 @@ func TestAuthenticate(t *testing.T) {
 				testutil.NotEqual(t, tc.SessionStore.ResponseSession, "")
 			case KeepCookie:
 				testutil.Equal(t, tc.SessionStore.ResponseSession, "")
-				testutil.Equal(t, tc.SessionStore.ResponseSession, "")
 			}
 
 			if gotErr != tc.ExpectedErr {
